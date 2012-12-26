@@ -1,0 +1,59 @@
+This file contains message digests of all files listed in MANIFEST,
+signed via the Module::Signature module, version 0.70.
+
+To verify the content in this distribution, first make sure you have
+Module::Signature installed, then type:
+
+    % cpansign -v
+
+It will check each file's integrity, as well as the signature's
+validity.  If "==> Signature verified OK! <==" is not displayed,
+the distribution may already have been compromised, and you should
+not run its Makefile.PL or Build.PL.
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+SHA1 069b3f1b421b2ec7d7b0548c522a286fcb5f4c27 Changes
+SHA1 aebb5f4bee3a2d24b6a640c95fb5df37769e7489 INSTALL
+SHA1 bf4ded40fa1fd11a235c207f782dcb395117acaa LICENSE
+SHA1 82e2d6a61caaa6a5718cf294c27d686b63131379 MANIFEST
+SHA1 69d1e15da1f85ce6d10c2b0d7ca694dece1815fb META.json
+SHA1 f6f359f3376827e7d430d13a28c1f34cf7d25983 META.yml
+SHA1 aeafe8c9977d01a62b471bb75e786603faa64a6a Makefile.PL
+SHA1 6d649f0d57f195af1fac245f0b68ab3b5ba6fd70 README
+SHA1 92b82d9f6ae1ebe998a861b8f47febdaf67d70a7 cpanfile
+SHA1 98ba4eba43f30a8d6586053166a35d86e3efee39 dist.ini
+SHA1 1a5894d6c1170b5f7c269cb78f20b310b86db6a1 lib/Net/Amazon/R53.pm
+SHA1 4b0dae385c14505761c6ff7fac90857f4e7330e9 lib/Net/Amazon/R53/AtomicChange.pm
+SHA1 e0a6cbbf7a1a2a2cc03f05ffa2b2fc697bc28d42 lib/Net/Amazon/R53/ChangeInfo.pm
+SHA1 df69f6f1be4313be52a846a65e9217cd0a1443e9 lib/Net/Amazon/R53/HostedZone.pm
+SHA1 c13b5910fa707f282c8a86fd70df3abf2e446b9a lib/Net/Amazon/R53/ResourceRecordSet.pm
+SHA1 a4512e95996e233c48cbc6c376219c42ebf4fccf lib/Net/Amazon/R53/ResourceRecordSet/Change.pm
+SHA1 69294f1a01b9cfae3b6837b9f291c804ec3b48a2 lib/Net/Amazon/R53/ResourceRecordSet/Stub.pm
+SHA1 7ac0447b259ea317a28e85f2135e8116c0d42a81 lib/Net/Amazon/R53/Role/NewFromRawData.pm
+SHA1 430ba8b2be162c731ad0bc4b98212f0368b0a716 lib/Net/Amazon/R53/Role/ParentR53.pm
+SHA1 724143aac1751a5a3d495663853fd2c6dcb6b507 share/batch_rrs_change.tt
+SHA1 f2bb85750fea7c61d5ddc06eab794f295f192072 share/create_hosted_zone.tt
+SHA1 e748dc8206d81412ccad9477ded7abfd291062d4 t/000-report-versions-tiny.t
+SHA1 46c17b57fc0564baa07117e9b001e4c92dfbc6a3 t/atomic_change.t
+SHA1 cc84691e6ac3674f1a98500b8adc91680e3670c8 t/equiv_stubs.t
+SHA1 4ba708a20c4dce763208aae0b805d1c2ea8385ec t/live.t
+SHA1 152e1cd27c37a648a8bdad392680eb65ea3d377e t/live/copy_hosted_zone.t
+SHA1 78a247f504e824152cd811a4320f69c33fe465f8 t/live/create_zone_no_caller_reference.t
+SHA1 6665503115d948f084c26f62c94abd008a4a035c t/loaders/dns_zoneparse.t
+SHA1 aeed196515f2a8066b1cd87718e150142490815a t/loaders/net_dns_zonefile.t
+SHA1 57d0afb52238cea7eb1a398cf63938b8093d4b15 t/loaders/testzone.db
+SHA1 8de19c9294905145ad5899e89d36f8d9d672ec49 t/stub-rr-name-coercion.t
+SHA1 04dbb38847a8883937c7c4fad2049fbfebcb7d01 t/stub_from_net_dns_rr.t
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.11 (GNU/Linux)
+
+iQEcBAEBAgAGBQJQ22O9AAoJEOd5N1CvIgQke5QH/RM9hodNBMOvJPhsNLodyXlj
+p7pF4ohsOEBg4/+UXAbSQuvXXyd9M7fa82EIhF2WVEwcWnBUAqv3DoMGehxsnBjW
+PtFkt4/NnkimNM7Rx6r9rrcVlTThxdq31r8SPR7R9wDTGsxL+HMXePjGHi2xWrTg
+FBdJ8x/kMuxe8eisyYTNDvpcwI6hIt8EpwYcOwE9bQt1hc6f16/rpI7BH2N/Nc3i
+zgkpiCsrtgUWwFf5oGheyvsAnQd0jLx2B7iSi0jldUq2CpM163OyXMlFGHC+UfKt
+Bi5xXOyvKkOnpYwvjjBlHDLYRw6Dezrx7Yvrf6NTLYEfUsn+iD+pav/AJ6V9yVQ=
+=nad2
+-----END PGP SIGNATURE-----
