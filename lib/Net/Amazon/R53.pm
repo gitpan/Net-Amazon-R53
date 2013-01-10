@@ -9,7 +9,7 @@
 #
 package Net::Amazon::R53;
 {
-  $Net::Amazon::R53::VERSION = '0.001'; # TRIAL
+  $Net::Amazon::R53::VERSION = '0.002'; # TRIAL
 }
 
 # ABSTRACT: An interface to Amazon's Route53
@@ -21,7 +21,7 @@ use Moose;
 use namespace::autoclean;
 use autobox::Core;
 use MooseX::AlwaysCoerce;
-use MooseX::AttributeShortcuts;
+use MooseX::AttributeShortcuts 0.017;
 use MooseX::Params::Validate;
 use MooseX::Types::Common::String ':all';
 use MooseX::Types::Path::Class ':all';
@@ -30,7 +30,7 @@ use Data::UUID;
 use File::ShareDir::ProjectDistDir;
 use HTTP::Request;
 use List::AllUtils 'first';
-use LWP::UserAgent;
+use LWP::UserAgent::Determined;
 use Template;
 use XML::Simple;
 
@@ -63,8 +63,8 @@ has signer => (
 
 has ua => (
     is      => 'lazy',
-    isa     => 'LWP::UserAgent',
-    builder => sub { LWP::UserAgent->new },
+    isa     => 'LWP::UserAgent::Determined',
+    builder => sub { LWP::UserAgent::Determined->new },
 );
 
 has endpoint_base => (
@@ -220,7 +220,7 @@ sub create_hosted_zone {
     my $hz     = $self->hosted_zone_class->new_from_raw_data($self, $info->{HostedZone});
     # TODO delegtion info
 
-    $self->_add_hosted_zone($hz)
+    $self->_add_hosted_zone($hz->plain_id => $hz)
         if $self->has_fetched_hosted_zones;
 
     return wantarray ? ($hz, $change) : $hz;
@@ -249,7 +249,8 @@ sub copy_hosted_zone {
         comment        => $comment,
         multi_batch_ok => 1,
         changes        => [
-            map { { action => 'CREATE', record => $_ } }
+            map  { { action => 'CREATE', record => $_ } }
+            grep { $_->type !~ /^(NS|SOA)$/             }
             $hz->resource_record_sets->flatten
         ],
     );
@@ -259,13 +260,18 @@ sub copy_hosted_zone {
 
 
 sub delete_hosted_zone {
-    my ($self, $hz_id) = @_;
+    my ($self, $hz_thing) = @_;
 
-    my $path = $hz_id =~ m!^/hostedzone/! ? $hz_id : "/hostedzone/$hz_id";
+    my $path
+        = blessed $hz_thing             ? $hz_thing->id
+        : $hz_thing =~ m!^/hostedzone/! ? $hz_thing
+        :                                 "/hostedzone/$hz_thing"
+        ;
+
     my $resp = $self->delete_request($path, undef);
 
     # OK if we make it here w/o dying
-    $self->_delete_hosted_zone($hz_id)
+    $self->_delete_hosted_zone($path->split(qr!/!)->pop)
         if $self->has_fetched_hosted_zones;
 
     # so here we do something a little different.  We use the ChangeInfo data
@@ -348,7 +354,7 @@ Net::Amazon::R53 - An interface to Amazon's Route53
 
 =head1 VERSION
 
-This document describes version 0.001 of Net::Amazon::R53 - released December 26, 2012 as part of Net-Amazon-R53.
+This document describes version 0.002 of Net::Amazon::R53 - released January 09, 2013 as part of Net-Amazon-R53.
 
 =head1 SYNOPSIS
 
@@ -483,7 +489,7 @@ the given zone to the new zone.
 
 Returns the new hosted zone instance.
 
-=head2 delete_hosted_zone($hz_id)
+=head2 delete_hosted_zone($hz_id | $hz)
 
 Delete a hosted zone, by its id; both the plain id (e.g. C<ZIQB30DSWGWG6>)
 or the full one Amazon returns (e.g. C</hostedzone/ZIQB30DSWGWG6>) are
@@ -530,6 +536,10 @@ L<L<Net::Amazon::Route53> is a prior implementation of an older Route53 API.|L<N
 =back
 
 =head1 AUTHOR
+
+Chris Weyl <cweyl@campusexplorer.com>
+
+=head1 CONTRIBUTOR
 
 Chris Weyl <cweyl@alumni.drew.edu>
 

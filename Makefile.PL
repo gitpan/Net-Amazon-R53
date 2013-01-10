@@ -12,7 +12,7 @@ install_share dist => "share";
 
 my %WriteMakefileArgs = (
   "ABSTRACT" => "An interface to Amazon's Route53",
-  "AUTHOR" => "Chris Weyl <cweyl\@alumni.drew.edu>",
+  "AUTHOR" => "Chris Weyl <cweyl\@campusexplorer.com>",
   "BUILD_REQUIRES" => {
     "Net::DNS" => 0,
     "Net::DNS::ZoneFile" => 0,
@@ -38,7 +38,7 @@ my %WriteMakefileArgs = (
     "Data::UUID" => 0,
     "File::ShareDir::ProjectDistDir" => 0,
     "HTTP::Request" => 0,
-    "LWP::UserAgent" => 0,
+    "LWP::UserAgent::Determined" => 0,
     "List::AllUtils" => 0,
     "Moose" => 0,
     "Moose::Autobox" => 0,
@@ -70,7 +70,7 @@ my %WriteMakefileArgs = (
     "overload" => 0,
     "utf8" => 0
   },
-  "VERSION" => "0.001",
+  "VERSION" => "0.002",
   "test" => {
     "TESTS" => "t/*.t t/live/*.t t/loaders/*.t"
   }

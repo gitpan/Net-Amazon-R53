@@ -14,28 +14,28 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 069b3f1b421b2ec7d7b0548c522a286fcb5f4c27 Changes
+SHA1 ab85dbd57e2fd168bfdd677a7fa402b6809d4404 Changes
 SHA1 aebb5f4bee3a2d24b6a640c95fb5df37769e7489 INSTALL
 SHA1 bf4ded40fa1fd11a235c207f782dcb395117acaa LICENSE
 SHA1 82e2d6a61caaa6a5718cf294c27d686b63131379 MANIFEST
-SHA1 69d1e15da1f85ce6d10c2b0d7ca694dece1815fb META.json
-SHA1 f6f359f3376827e7d430d13a28c1f34cf7d25983 META.yml
-SHA1 aeafe8c9977d01a62b471bb75e786603faa64a6a Makefile.PL
-SHA1 6d649f0d57f195af1fac245f0b68ab3b5ba6fd70 README
-SHA1 92b82d9f6ae1ebe998a861b8f47febdaf67d70a7 cpanfile
-SHA1 98ba4eba43f30a8d6586053166a35d86e3efee39 dist.ini
-SHA1 1a5894d6c1170b5f7c269cb78f20b310b86db6a1 lib/Net/Amazon/R53.pm
-SHA1 4b0dae385c14505761c6ff7fac90857f4e7330e9 lib/Net/Amazon/R53/AtomicChange.pm
-SHA1 e0a6cbbf7a1a2a2cc03f05ffa2b2fc697bc28d42 lib/Net/Amazon/R53/ChangeInfo.pm
-SHA1 df69f6f1be4313be52a846a65e9217cd0a1443e9 lib/Net/Amazon/R53/HostedZone.pm
-SHA1 c13b5910fa707f282c8a86fd70df3abf2e446b9a lib/Net/Amazon/R53/ResourceRecordSet.pm
-SHA1 a4512e95996e233c48cbc6c376219c42ebf4fccf lib/Net/Amazon/R53/ResourceRecordSet/Change.pm
-SHA1 69294f1a01b9cfae3b6837b9f291c804ec3b48a2 lib/Net/Amazon/R53/ResourceRecordSet/Stub.pm
-SHA1 7ac0447b259ea317a28e85f2135e8116c0d42a81 lib/Net/Amazon/R53/Role/NewFromRawData.pm
-SHA1 430ba8b2be162c731ad0bc4b98212f0368b0a716 lib/Net/Amazon/R53/Role/ParentR53.pm
+SHA1 942ab6e193ac477affcccf9e8c8e6e5dfec8a435 META.json
+SHA1 f1623ffef6285c9bd7f8cb28997c20a0cbf94c51 META.yml
+SHA1 9c10b69b9b3fd443946d1ce49c43821f9ed19426 Makefile.PL
+SHA1 bebb41c9099a47ad796e23a6d6dec3758a381466 README
+SHA1 0c423d54b006e359d1787ff4d4f18405a6330ebb cpanfile
+SHA1 091fcc7a7f5ca986c1e79de89d2ea1467273ca3c dist.ini
+SHA1 debde8181719a702dfed8a59d777f23a393d41e3 lib/Net/Amazon/R53.pm
+SHA1 4bcb25dd62d3033537d2e1e151de826709308052 lib/Net/Amazon/R53/AtomicChange.pm
+SHA1 9cb07b876bd015ebf3a9743cd8a5b7450cdefb40 lib/Net/Amazon/R53/ChangeInfo.pm
+SHA1 bb5fe9fac0ce2ae0a0e72357cde5d2eb58ba9d5b lib/Net/Amazon/R53/HostedZone.pm
+SHA1 6a886cdb7e6095898e7e9be7d150a8a1f811f5c6 lib/Net/Amazon/R53/ResourceRecordSet.pm
+SHA1 80a8548081fa83298894c8127978d032e37ec060 lib/Net/Amazon/R53/ResourceRecordSet/Change.pm
+SHA1 550a26ad559b3aed2f916f1c668e42ed5d82eb54 lib/Net/Amazon/R53/ResourceRecordSet/Stub.pm
+SHA1 c3668c6a9990be40d51df092f95c60ef71c27862 lib/Net/Amazon/R53/Role/NewFromRawData.pm
+SHA1 ba201957c413eebf2d73deaa79b33fb186519b9b lib/Net/Amazon/R53/Role/ParentR53.pm
 SHA1 724143aac1751a5a3d495663853fd2c6dcb6b507 share/batch_rrs_change.tt
 SHA1 f2bb85750fea7c61d5ddc06eab794f295f192072 share/create_hosted_zone.tt
-SHA1 e748dc8206d81412ccad9477ded7abfd291062d4 t/000-report-versions-tiny.t
+SHA1 a6b1d8fff968d9824d7fb99c870fa4aab15d06a0 t/000-report-versions-tiny.t
 SHA1 46c17b57fc0564baa07117e9b001e4c92dfbc6a3 t/atomic_change.t
 SHA1 cc84691e6ac3674f1a98500b8adc91680e3670c8 t/equiv_stubs.t
 SHA1 4ba708a20c4dce763208aae0b805d1c2ea8385ec t/live.t
@@ -49,11 +49,11 @@ SHA1 04dbb38847a8883937c7c4fad2049fbfebcb7d01 t/stub_from_net_dns_rr.t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.11 (GNU/Linux)
 
-iQEcBAEBAgAGBQJQ22O9AAoJEOd5N1CvIgQke5QH/RM9hodNBMOvJPhsNLodyXlj
-p7pF4ohsOEBg4/+UXAbSQuvXXyd9M7fa82EIhF2WVEwcWnBUAqv3DoMGehxsnBjW
-PtFkt4/NnkimNM7Rx6r9rrcVlTThxdq31r8SPR7R9wDTGsxL+HMXePjGHi2xWrTg
-FBdJ8x/kMuxe8eisyYTNDvpcwI6hIt8EpwYcOwE9bQt1hc6f16/rpI7BH2N/Nc3i
-zgkpiCsrtgUWwFf5oGheyvsAnQd0jLx2B7iSi0jldUq2CpM163OyXMlFGHC+UfKt
-Bi5xXOyvKkOnpYwvjjBlHDLYRw6Dezrx7Yvrf6NTLYEfUsn+iD+pav/AJ6V9yVQ=
-=nad2
+iQEcBAEBAgAGBQJQ7goaAAoJEOd5N1CvIgQkmSEIAJyRUlvTLZBrBv139tpU8VZ4
+ZS4Gx24I6fsjdepfk4bXPalMrb1uByG7QXZqmYzJA8inih1yLjJFN33PFefjzHxV
+5i++Ksff+M3JqjUKRdOulepJ+OyPCwITLxknWBkaPzMvf44s/n0KgZse0f1w2G5c
+NX817PGN9F0WbDGlGbd13O79xA2p69dA/yBDD0Oqfi0dfoGqnOVlosu/XWX4BDSy
+c1RWo4ynYP1U5amZPk03eJkaYshwbGWWicjvjmDRfryBETwMZJefWcAibE1fQVpR
+rRf7mYnQHm66TU3d5QWviQsUg9IRTMd83OeN8E4zmsUcxejuEhuNxqX78AR4LCE=
+=5LIK
 -----END PGP SIGNATURE-----

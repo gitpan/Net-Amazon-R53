@@ -1,7 +1,7 @@
 {
    "abstract" : "An interface to Amazon's Route53",
    "author" : [
-      "Chris Weyl <cweyl@alumni.drew.edu>"
+      "Chris Weyl <cweyl@campusexplorer.com>"
    ],
    "dynamic_config" : 0,
    "generated_by" : "Dist::Zilla version 4.300028, CPAN::Meta::Converter version 2.120921",
@@ -37,7 +37,7 @@
             "Data::UUID" : "0",
             "File::ShareDir::ProjectDistDir" : "0",
             "HTTP::Request" : "0",
-            "LWP::UserAgent" : "0",
+            "LWP::UserAgent::Determined" : "0",
             "List::AllUtils" : "0",
             "Moose" : "0",
             "Moose::Autobox" : "0",
@@ -89,46 +89,46 @@
    "provides" : {
       "Net::Amazon::R53" : {
          "file" : "lib/Net/Amazon/R53.pm",
-         "version" : "0.001"
+         "version" : "0.002"
       },
       "Net::Amazon::R53::AtomicChange" : {
          "file" : "lib/Net/Amazon/R53/AtomicChange.pm",
-         "version" : "0.001"
+         "version" : "0.002"
       },
       "Net::Amazon::R53::ChangeInfo" : {
          "file" : "lib/Net/Amazon/R53/ChangeInfo.pm",
-         "version" : "0.001"
+         "version" : "0.002"
       },
       "Net::Amazon::R53::HostedZone" : {
          "file" : "lib/Net/Amazon/R53/HostedZone.pm",
-         "version" : "0.001"
+         "version" : "0.002"
       },
       "Net::Amazon::R53::ResourceRecordSet" : {
          "file" : "lib/Net/Amazon/R53/ResourceRecordSet.pm",
-         "version" : "0.001"
+         "version" : "0.002"
       },
       "Net::Amazon::R53::ResourceRecordSet::Change" : {
          "file" : "lib/Net/Amazon/R53/ResourceRecordSet/Change.pm",
-         "version" : "0.001"
+         "version" : "0.002"
       },
       "Net::Amazon::R53::ResourceRecordSet::Stub" : {
          "file" : "lib/Net/Amazon/R53/ResourceRecordSet/Stub.pm",
-         "version" : "0.001"
+         "version" : "0.002"
       },
       "Net::Amazon::R53::Role::NewFromRawData" : {
          "file" : "lib/Net/Amazon/R53/Role/NewFromRawData.pm",
-         "version" : "0.001"
+         "version" : "0.002"
       },
       "Net::Amazon::R53::Role::ParentR53" : {
          "file" : "lib/Net/Amazon/R53/Role/ParentR53.pm",
-         "version" : "0.001"
+         "version" : "0.002"
       }
    },
    "release_status" : "testing",
    "resources" : {
       "repository" : {}
    },
-   "version" : "0.001",
+   "version" : "0.002",
    "x_Dist_Zilla" : {
       "perl" : {
          "version" : "5.016001"
@@ -142,32 +142,32 @@
          {
             "class" : "Dist::Zilla::Plugin::Git::Check",
             "name" : "@RSRCHBOY/@Git/Check",
-            "version" : "2.005"
+            "version" : "2.006"
          },
          {
             "class" : "Dist::Zilla::Plugin::Git::Commit",
             "name" : "@RSRCHBOY/@Git/Commit",
-            "version" : "2.005"
+            "version" : "2.006"
          },
          {
             "class" : "Dist::Zilla::Plugin::Git::Tag",
             "name" : "@RSRCHBOY/@Git/Tag",
-            "version" : "2.005"
+            "version" : "2.006"
          },
          {
             "class" : "Dist::Zilla::Plugin::Git::Push",
             "name" : "@RSRCHBOY/@Git/Push",
-            "version" : "2.005"
+            "version" : "2.006"
          },
          {
             "class" : "Dist::Zilla::Plugin::Git::NextVersion",
             "name" : "@RSRCHBOY/Git::NextVersion",
-            "version" : "2.005"
+            "version" : "2.006"
          },
          {
             "class" : "Dist::Zilla::Plugin::ContributorsFromGit",
             "name" : "@RSRCHBOY/ContributorsFromGit",
-            "version" : "0.002"
+            "version" : "0.003"
          },
          {
             "class" : "Dist::Zilla::Plugin::Git::CheckFor::CorrectBranch",

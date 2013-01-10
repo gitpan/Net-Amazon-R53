@@ -9,7 +9,7 @@
 #
 package Net::Amazon::R53::Role::ParentR53;
 {
-  $Net::Amazon::R53::Role::ParentR53::VERSION = '0.001'; # TRIAL
+  $Net::Amazon::R53::Role::ParentR53::VERSION = '0.002'; # TRIAL
 }
 
 # ABSTRACT: A role bestowing a parent link
@@ -53,7 +53,7 @@ Net::Amazon::R53::Role::ParentR53 - A role bestowing a parent link
 
 =head1 VERSION
 
-This document describes version 0.001 of Net::Amazon::R53::Role::ParentR53 - released December 26, 2012 as part of Net-Amazon-R53.
+This document describes version 0.002 of Net::Amazon::R53::Role::ParentR53 - released January 09, 2013 as part of Net-Amazon-R53.
 
 =head1 REQUIRED ATTRIBUTES
 
@@ -76,6 +76,10 @@ L<Net::Amazon::R53|Net::Amazon::R53>
 =back
 
 =head1 AUTHOR
+
+Chris Weyl <cweyl@campusexplorer.com>
+
+=head1 CONTRIBUTOR
 
 Chris Weyl <cweyl@alumni.drew.edu>
 

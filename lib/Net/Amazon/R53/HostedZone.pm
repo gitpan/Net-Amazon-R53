@@ -9,7 +9,7 @@
 #
 package Net::Amazon::R53::HostedZone;
 {
-  $Net::Amazon::R53::HostedZone::VERSION = '0.001'; # TRIAL
+  $Net::Amazon::R53::HostedZone::VERSION = '0.002'; # TRIAL
 }
 
 # ABSTRACT: Representation of a Route53 HostedZone
@@ -50,6 +50,7 @@ with
 
 
 has caller_reference => (is => 'ro', isa => NonEmptySimpleStr, required => 1);
+has comment          => (is => 'ro', isa => 'Str');
 has config           => (is => 'ro', isa => 'ArrayRef',        builder  => sub { [ ] });
 has id               => (is => 'ro', isa => NonEmptySimpleStr, required => 1);
 has name             => (is => 'ro', isa => NonEmptySimpleStr, required => 1);
@@ -234,7 +235,7 @@ Net::Amazon::R53::HostedZone - Representation of a Route53 HostedZone
 
 =head1 VERSION
 
-This document describes version 0.001 of Net::Amazon::R53::HostedZone - released December 26, 2012 as part of Net-Amazon-R53.
+This document describes version 0.002 of Net::Amazon::R53::HostedZone - released January 09, 2013 as part of Net-Amazon-R53.
 
 =head1 DESCRIPTION
 
@@ -347,6 +348,10 @@ L<Net::Amazon::R53|Net::Amazon::R53>
 =back
 
 =head1 AUTHOR
+
+Chris Weyl <cweyl@campusexplorer.com>
+
+=head1 CONTRIBUTOR
 
 Chris Weyl <cweyl@alumni.drew.edu>
 

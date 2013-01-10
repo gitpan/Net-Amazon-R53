@@ -9,7 +9,7 @@
 #
 package Net::Amazon::R53::AtomicChange;
 {
-  $Net::Amazon::R53::AtomicChange::VERSION = '0.001'; # TRIAL
+  $Net::Amazon::R53::AtomicChange::VERSION = '0.002'; # TRIAL
 }
 
 # ABSTRACT: Representation of an atomic change
@@ -129,7 +129,7 @@ Net::Amazon::R53::AtomicChange - Representation of an atomic change
 
 =head1 VERSION
 
-This document describes version 0.001 of Net::Amazon::R53::AtomicChange - released December 26, 2012 as part of Net-Amazon-R53.
+This document describes version 0.002 of Net::Amazon::R53::AtomicChange - released January 09, 2013 as part of Net-Amazon-R53.
 
 =head1 SYNOPSIS
 
@@ -182,10 +182,19 @@ This is the set of the "from" resource records.
 
 Legal values:
 
-* An ArrayRef of L<Stubs|Net::Amazon::R53::ResourceRecordSet::Stub>.
+=over 4
 
-* L<HostedZone|Net::Amazon::R53::HostedZone> (coerced via
-L<Net::Amazon::R53::HostedZone/resource_record_sets>).
+=item *
+
+An ArrayRef of L<Stubs|Net::Amazon::R53::ResourceRecordSet::Stub>.
+
+=item *
+
+L<HostedZone|Net::Amazon::R53::HostedZone>
+
+This can be coerced from a L<HostedZone|Net::Amazon::R53::HostedZone> using L<Net::Amazon::R53::HostedZone/resource_record_sets>.
+
+=back
 
 =head2 omega
 
@@ -255,6 +264,10 @@ L<Net::Amazon::R53|Net::Amazon::R53>
 =back
 
 =head1 AUTHOR
+
+Chris Weyl <cweyl@campusexplorer.com>
+
+=head1 CONTRIBUTOR
 
 Chris Weyl <cweyl@alumni.drew.edu>
 

@@ -9,7 +9,7 @@
 #
 package Net::Amazon::R53::Role::NewFromRawData;
 {
-  $Net::Amazon::R53::Role::NewFromRawData::VERSION = '0.001'; # TRIAL
+  $Net::Amazon::R53::Role::NewFromRawData::VERSION = '0.002'; # TRIAL
 }
 
 # ABSTRACT: Constructs instances from just the returned raw_data
@@ -61,7 +61,7 @@ Net::Amazon::R53::Role::NewFromRawData - Constructs instances from just the retu
 
 =head1 VERSION
 
-This document describes version 0.001 of Net::Amazon::R53::Role::NewFromRawData - released December 26, 2012 as part of Net-Amazon-R53.
+This document describes version 0.002 of Net::Amazon::R53::Role::NewFromRawData - released January 09, 2013 as part of Net-Amazon-R53.
 
 =head1 ATTRIBUTES
 
@@ -89,6 +89,10 @@ L<Net::Amazon::R53|Net::Amazon::R53>
 =back
 
 =head1 AUTHOR
+
+Chris Weyl <cweyl@campusexplorer.com>
+
+=head1 CONTRIBUTOR
 
 Chris Weyl <cweyl@alumni.drew.edu>
 
